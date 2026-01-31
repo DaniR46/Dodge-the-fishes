@@ -7,6 +7,21 @@ The goal is simple: dodge the fishes and survive as long as possible to set a ne
 
 ---
 
+## 🛠️ How to Install & Play
+Since this is an open-source project, you can run the game directly inside the Godot Engine.
+
+### Prerequisites
+* You need **Godot Engine 4.x** installed on your computer. [Download Godot here](https://godotengine.org/download).
+
+### Steps to Run:
+1. **Download:** Click the green **<> Code** button above and select **Download ZIP** (or clone the repository).
+2. **Extract:** Unzip the folder to your computer.
+3. **Open Godot:** Launch the Godot Engine.
+4. **Import:** Click the **Import** button and select the `project.godot` file inside the game folder.
+5. **Play:** Press the **Play** button (top right corner) or press `F5` to start the game!
+
+---
+
 ## 🚀 About the Project
 This is **my very first game project**.
 I built this to learn the basics of game development, GDScript, and the Godot Engine. While the core gameplay is functional, I am constantly learning and looking for ways to improve my coding skills and game design.
@@ -32,7 +47,7 @@ I plan to keep updating the game as I learn more. Here is what I am working on n
 - [ ] **Difficulty Selection:** Adding a menu to choose between *Easy, Medium, and Hard* modes.
 - [ ] **HUD Improvements:** Polishing the User Interface for a better look.
 - [ ] **New Enemies:** Adding more fish varieties with different behaviors.
-- [ ] **Power-ups:** (Maybe?) Items to help the player survive longer.
+- [ ] **Power-ups:** Items to help the player survive longer.
 
 **Have a suggestion for an update?**
 I am open to ideas! Feel free to open an Issue or contact me if you have a cool concept for the game.
