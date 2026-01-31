@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Primo (modificato)"
+config/name="Dodge the Fishes | GITHUB"
 run/main_scene="uid://cjtvgoa1unwmj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"

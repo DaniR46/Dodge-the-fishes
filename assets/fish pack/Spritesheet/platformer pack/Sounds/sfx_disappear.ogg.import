@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://nrx5p0x08vom"
+path="res://.godot/imported/sfx_disappear.ogg-c488450b8154be0e19d2f8cc5a5406a2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/fish pack/Spritesheet/platformer pack/Sounds/sfx_disappear.ogg"
+dest_files=["res://.godot/imported/sfx_disappear.ogg-c488450b8154be0e19d2f8cc5a5406a2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

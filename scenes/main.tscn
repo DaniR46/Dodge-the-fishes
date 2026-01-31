@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cjtvgoa1unwmj"]
+
+[ext_resource type="Script" uid="uid://cfwv2pcxlla2u" path="res://scripts/main.gd" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cr024x17mbepw" path="res://scenes/mob.tscn" id="2_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://d17d1mpaf8l77" path="res://scenes/player.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://d32l8rtuuhpmy" path="res://scenes/hud.tscn" id="4_85g3d"]
+[ext_resource type="AudioStream" uid="uid://b572xfo8oqqpq" path="res://assets/godot soundtrack/Mesmerizing Galaxy Loop.mp3" id="5_choun"]
+[ext_resource type="AudioStream" uid="uid://cju1ygyppooox" path="res://assets/godot soundtrack/442127__euphrosyyn__8-bit-game-over.wav" id="6_ya4ey"]
+
+[sub_resource type="Curve2D" id="Curve2D_7mycd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 479, -1, 0, 0, 0, 0, 480, 718, 0, 0, 0, 0, 0, 715, 0, 0, 0, 0, 1, -1)
+}
+point_count = 5
+
+[node name="Main" type="Node" unique_id=965191370]
+script = ExtResource("1_tefeu")
+mob_scene = ExtResource("2_o6xl0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1494076250]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6284874, 0.73193175, 0.90876985, 1)
+
+[node name="Player" parent="." unique_id=291940637 instance=ExtResource("3_tipki")]
+
+[node name="MobTimer" type="Timer" parent="." unique_id=860300748]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=771580646]
+
+[node name="StartTimer" type="Timer" parent="." unique_id=883762491]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=261862569]
+position = Vector2(240, 450)
+
+[node name="MobPath" type="Path2D" parent="." unique_id=1497722182]
+curve = SubResource("Curve2D_7mycd")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=136971106]
+position = Vector2(1, -1)
+
+[node name="HUD" parent="." unique_id=84231853 instance=ExtResource("4_85g3d")]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=159683683]
+stream = ExtResource("5_choun")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=426127049]
+stream = ExtResource("6_ya4ey")
+
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

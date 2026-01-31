@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwim4mmugnicu"
+path="res://.godot/imported/442127__euphrosyyn__8-bit-game-over.wav-386e97a1d4948c7b3f3b5fc662bf723a.sample"
+
+[deps]
+
+source_file="res://assets/fish pack/PNG/Default/godot soundtrack/442127__euphrosyyn__8-bit-game-over.wav"
+dest_files=["res://.godot/imported/442127__euphrosyyn__8-bit-game-over.wav-386e97a1d4948c7b3f3b5fc662bf723a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

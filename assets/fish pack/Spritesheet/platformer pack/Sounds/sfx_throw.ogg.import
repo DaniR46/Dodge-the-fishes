@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bu51nga7xm7il"
+path="res://.godot/imported/sfx_throw.ogg-22a03f3849971256b85fb34e82f3f357.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/fish pack/Spritesheet/platformer pack/Sounds/sfx_throw.ogg"
+dest_files=["res://.godot/imported/sfx_throw.ogg-22a03f3849971256b85fb34e82f3f357.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

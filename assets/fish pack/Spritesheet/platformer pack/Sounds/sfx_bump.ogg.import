@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bv0ajo1na0ej1"
+path="res://.godot/imported/sfx_bump.ogg-d921fe5214e1e064885164b5bc2eff66.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/fish pack/Spritesheet/platformer pack/Sounds/sfx_bump.ogg"
+dest_files=["res://.godot/imported/sfx_bump.ogg-d921fe5214e1e064885164b5bc2eff66.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
