@@ -29,14 +29,11 @@ func update_score(score):
 	
 func on_start_button_pressed():
 	$StartButton.hide()
-	start_game.emit()
+	$DifficultyMenu.show()
 	
 func on_message_timer_timeout():
 	$Message.hide()
 
-
-func _on_start_button_pressed() -> void:
-	pass # Replace with function body.
 	
 func update_highscore(new_highscore):
 	$HighScoreLabel.text = "Best: " + str(new_highscore)
@@ -49,3 +46,22 @@ func _on_pause_button_pressed():
 	else:
 		get_tree().paused = false
 	
+
+
+func _on_easy_button_pressed() -> void:
+	scegli_difficolta(0) # 0 = Facile
+	start_game.emit()
+
+func _on_medium_button_pressed() -> void:
+	scegli_difficolta(1) # 1 = Normale
+	start_game.emit()
+
+func _on_hard_button_pressed() -> void:
+	scegli_difficolta(2) # 2 = Difficile
+	start_game.emit()
+	
+func scegli_difficolta(livello):
+	get_tree().paused = false
+	global.current_difficulty = livello
+	start_game.emit()
+	$DifficultyMenu.hide()

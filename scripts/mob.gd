@@ -5,14 +5,25 @@ var max_speed = 250.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var mob_types = $AnimatedSprite2D.sprite_frames.get_animation_names()
+	$AnimatedSprite2D.play(mob_types[randi() % mob_types.size()])
 	
+	var speed_multiplier = 1.0
+	
+	if global.current_difficulty == global.level.EASY:
+		speed_multiplier = 0.7 # 30% piu lenti
+	if global.current_difficulty == global.level.MEDIUM:
+		speed_multiplier = 1.0 # velocita invariata
+	if global.current_difficulty == global.level.HARD:
+		speed_multiplier = 1.6 # 60% piu veloci
+		
 func scegli_tipo_casuale():
 	var mob_types = Array($AnimatedSprite2D.sprite_frames.get_animation_names())
 	var random_type = mob_types.pick_random()
 	$AnimatedSprite2D.play(random_type)
 	match random_type:
 		"tartug":
+			scale = Vector2(1,1)
 			$CollisionShapeTartug.disabled = false
 			$CollisionShapeLight.disabled = true
 			$CollisionShapeShark.disabled = true

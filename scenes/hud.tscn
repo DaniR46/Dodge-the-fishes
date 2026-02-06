@@ -4,6 +4,9 @@
 [ext_resource type="FontFile" uid="uid://nw0dhy4c6t3o" path="res://assets/fonts/Xolonium-Regular.ttf" id="2_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://cha62pradyww2" path="res://assets/HUD/gui/gui_buttons_vol1/sprites/buttons/g21526.png" id="3_6fi6k"]
 [ext_resource type="Texture2D" uid="uid://dvqgk3iptryt6" path="res://assets/HUD/gui/gui_buttons_vol1/sprites/buttons/g23174.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://dafq0xwo6aoou" path="res://assets/HUD/gui/gui_buttons_vol1/sprites/buttons/g9236.png" id="5_5pdws"]
+[ext_resource type="Texture2D" uid="uid://cqhiceehm4woi" path="res://assets/HUD/gui/gui_buttons_vol1/sprites/buttons/g9202.png" id="6_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://c1wsq0126wmg3" path="res://assets/HUD/gui/gui_buttons_vol1/sprites/buttons/g9244.png" id="7_0i1j5"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_64ctp"]
 action = &"start_game"
@@ -99,5 +102,63 @@ texture_pressed = ExtResource("3_6fi6k")
 wait_time = 2.0
 one_shot = true
 
+[node name="DifficultyMenu" type="Control" parent="." unique_id=686707521]
+visible = false
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EasyButton" type="Button" parent="DifficultyMenu" unique_id=1890831847]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = 108.0
+offset_right = 77.5
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_5pdws")
+flat = true
+
+[node name="MediumButton" type="Button" parent="DifficultyMenu" unique_id=349919940]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = 181.0
+offset_right = 77.5
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_hd3ao")
+flat = true
+
+[node name="HardButton" type="Button" parent="DifficultyMenu" unique_id=572445631]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = 251.0
+offset_right = 77.5
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("7_0i1j5")
+flat = true
+
 [connection signal="pressed" from="StartButton" to="." method="on_start_button_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="DifficultyMenu/EasyButton" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="DifficultyMenu/MediumButton" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="DifficultyMenu/HardButton" to="." method="_on_hard_button_pressed"]
